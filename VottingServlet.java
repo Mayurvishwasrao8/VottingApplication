@@ -26,7 +26,6 @@ public class VottingServlet extends HttpServlet {
 
         String candidate = request.getParameter("candidate");
       
-        
         PrintWriter pw=response.getWriter();
      
     	PreparedStatement pstmt=null;
@@ -53,7 +52,7 @@ public class VottingServlet extends HttpServlet {
 					+ "    margin: 0; }");
 			pw.print("</style>");
 			pw.print("<div class=con>");
-			pw.print("<h1>"+ "Vote sucessfully");
+			pw.print("<h1>"+ "Voteing sucessful");
 			pw.print("<br>");
 			 RequestDispatcher rd=request.getRequestDispatcher("Logout.html");
 			 rd.include(request, response);
