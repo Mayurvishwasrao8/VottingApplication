@@ -48,7 +48,7 @@ public class VottingCount extends HttpServlet {
 	  					+ "    text-align: center;\r\n"
 	  					+ "  font-family: Arial, sans-serif;\r\n"
 	  					+ "    background-color: #f0f0f0;\r\n"
-	  					+ "    display: flex;\r\n"
+	  					
 	  					+ "    justify-content: center;\r\n"
 	  					+ "    align-items: center;\r\n"
 	  					+ "    height: 100vh;\r\n"
@@ -59,7 +59,7 @@ public class VottingCount extends HttpServlet {
 					pstmt=con.prepareStatement(query);
 					rs=pstmt.executeQuery();
 				  while(rs.next()) {
-					  pw.print("<h6>Candidate 1 Vote Count ="+rs.getInt("count")+"\n" );
+					  pw.print("<h1>Candidate 1 Vote Count ="+rs.getInt("count")+"\n" );
 				  }
 					
 				} catch (SQLException e) {
@@ -71,7 +71,7 @@ public class VottingCount extends HttpServlet {
 					pstmt=con.prepareStatement(query1);
 					rs=pstmt.executeQuery();
 				  while(rs.next()) {
-					  pw.print("<h6>Candidate 2 Vote Count ="+rs.getInt("count") );
+					  pw.print("<h1>Candidate 2 Vote Count ="+rs.getInt("count") );
 				  }
 					
 				} catch (SQLException e) {
@@ -85,7 +85,7 @@ public class VottingCount extends HttpServlet {
 				pstmt=con.prepareStatement(query2);
 				rs=pstmt.executeQuery();
 			  while(rs.next()) {
-				  pw.print("<h6>Candidate 3 Vote Count ="+rs.getInt("count") );
+				  pw.print("<h1>Candidate 3 Vote Count ="+rs.getInt("count") );
 			  }
 				
 			} catch (SQLException e) {
@@ -97,7 +97,7 @@ public class VottingCount extends HttpServlet {
 				pstmt=con.prepareStatement(query3);
 				rs=pstmt.executeQuery();
 			  while(rs.next()) {
-				  pw.print("<h6>Candidate 4 Vote Count ="+rs.getInt("count") );
+				  pw.print("<h1>Candidate 4 Vote Count ="+rs.getInt("count") );
 			  }
 			  pw.print("<br>");
 			 RequestDispatcher rd=req.getRequestDispatcher("Logout.html");
